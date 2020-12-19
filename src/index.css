@@ -9,6 +9,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 320px;
 }
 
 *,
@@ -24,7 +25,6 @@ ul {
 /* *** App *** */
 .main {
   position: relative;
-  max-width: 800px;
   color: #555;
   width: 500px;
   border: 1px solid #dedede;
@@ -147,4 +147,51 @@ ul {
   width: 145px;
   height: 20px;
   font: 16px 'Dancing Script', cursive;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: 35px;
+  }
+  body {
+    padding: 20px 0;
+  }
+  .main {
+    margin: 0 15px;
+    width: inherit;
+    max-width: 800px;
+  }
+  .todo__item {
+    padding: 5px 32px 5px 7px;
+    font-size: 15px;
+  }
+  .todo__item input {
+    transform: translate(-5px, 1px);
+    width: 10px;
+    height: 11px;
+  }
+  .lines {
+    right: 25px;
+  }
+  .todo__form {
+    padding: 15px 40px 15px 7px;
+    text-align: inherit;
+  }
+  .todo__form input {
+    width: 205px;
+    font-size: 14px;
+  }
+  .todo__form::placeholder {
+    font-size: 14px;
+  }
+  .todo__item button {
+    width: 23px;
+  }
+  .error-msg {
+    left: 46px;
+    text-align: center;
+    font-size: 14px;
+    width: 130px;
+  }
+
 }
